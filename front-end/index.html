@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna's Salon: The Convergence of Artificial Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Luna's Salon: The Convergence of Artificial Intelligence</h1>
+
+    <div class="card">
+        <h2>Input Prompt</h2>
+        <textarea id="promptInput" rows="4" placeholder="Enter your prompt here..."></textarea>
+    </div>
+
+    <div class="card">
+        <h2>Select Models</h2>
+        <div class="checkbox-group" id="modelCheckboxes">
+            <!-- "All" option will be dynamically inserted here -->
+        </div>
+    </div>
+    
+    <button id="generateBtn">Generate Response</button>
+
+    <div id="progressBarContainer" class="progress-bar-container" style="display: none;">
+        <div id="progressBar" class="progress-bar"></div>
+    </div>
+
+    <div id="modelOutputs" class="card" style="display: none;">
+        <h2>Individual Model Responses</h2>
+        <div id="modelTabs" class="tabs"></div>
+        <div id="modelResponses"></div>
+    </div>
+
+    <!-- Card container for displaying the synthesized output -->
+    <div class="card">
+        <h2>Synthesized Output</h2>
+        <!-- Loading spinner -->
+        <div id="loadingSpinner" class="spinner" style="display: none;"></div>
+        <!-- Paragraph element to show the synthesized output -->
+        <p id="synthesizedOutput">The synthesized output will appear here.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

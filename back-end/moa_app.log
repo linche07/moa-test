@@ -1,0 +1,53 @@
+2024-08-02 14:02:02,813 INFO: Received request for models [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:227]
+2024-08-02 14:02:16,879 INFO: Received MoA request: {'prompt': 'hello world!', 'selectedModels': [{'provider': 'OpenAI', 'model': 'gpt-3.5-turbo'}, {'provider': 'Tongyi', 'model': 'Qwen-1_8B-Chat'}], 'aggregatorConfig': {'provider': 'OpenAI', 'model': 'gpt-3.5-turbo'}, 'customPrompt': '', 'rounds': 1, 'temperature': 0.7, 'maxTokens': 2048} [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:233]
+2024-08-02 14:02:16,880 INFO: Starting MoA process with prompt: hello world! [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:164]
+2024-08-02 14:02:16,880 INFO: Selected models: [{'provider': 'OpenAI', 'model': 'gpt-3.5-turbo'}, {'provider': 'Tongyi', 'model': 'Qwen-1_8B-Chat'}] [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:165]
+2024-08-02 14:02:16,881 INFO: Aggregator config: {'provider': 'OpenAI', 'model': 'gpt-3.5-turbo'} [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:166]
+2024-08-02 14:02:16,881 INFO: Round 1/1 collecting reference responses. [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:172]
+2024-08-02 14:02:16,881 INFO: Querying OpenAI:gpt-3.5-turbo [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:180]
+2024-08-02 14:02:19,417 INFO: Proposal from OpenAI:gpt-3.5-turbo (Round 1): Hello! How can I assist you today?... [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:188]
+2024-08-02 14:02:19,417 INFO: Querying Tongyi:Qwen-1_8B-Chat [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:180]
+2024-08-02 14:02:20,396 INFO: Proposal from Tongyi:Qwen-1_8B-Chat (Round 1): Hello! How can I assist you today?... [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:188]
+2024-08-02 14:02:20,397 INFO: Aggregating with OpenAI:gpt-3.5-turbo [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:202]
+2024-08-02 14:02:20,432 INFO: Aggregating with OpenAI. Context: query:
+hello world!
+
+information:
+1. Hello! How can I assist you today?
+2. Hello! How can I assist y... [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:114]
+2024-08-02 14:02:23,785 INFO: Aggregation result: The query "hello world!" seems to be a general greeting or expression without a specific request or ... [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:123]
+2024-08-02 14:02:23,785 INFO: Aggregation result: The query "hello world!" seems to be a general greeting or expression without a specific request or ... [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:208]
+2024-08-02 14:02:23,785 INFO: MoA process completed [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:222]
+2024-08-02 14:02:23,786 INFO: Conversation saved: 2024-08-02T14:02:23.785914 [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:153]
+2024-08-02 14:02:23,786 INFO: Sending MoA response: {'proposals': {'OpenAI:gpt-3.5-turbo': 'Hello! How can I assist you today?', 'Tongyi:Qwen-1_8B-Chat': 'Hello! How can I assist you today?'}, 'aggregatedResponse': 'The query "hello world!" seems to be a general greeting or expression without a specific request or question attached to it. In response to this, it would be appropriate to acknowledge the greeting and inquire if there is a specific way in which assistance is needed or if there are any specific topics or questions to address. It\'s important to engage with the person who initiated the conversation and provide a helpful response based on their needs or interests. If more context or information is provided, a more tailored and specific response can be given to address the individual\'s concerns or queries effectively.'} [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:256]
+2024-08-02 14:03:29,761 INFO: Received MoA request: {'prompt': '    {\n        "id": "round1_test_data_055",\n        "context": "在MSU大学里，有多个学院和系，其中每个系归属于一个特定的学院，每个学院归属于大学。以下是一些与MSU大学相关的人员及其职务信息：\\n\\n- 不同系的主席包括生物学系的Cook，数学系的Farris，化学系的Hansen，工程系的Desai，计算机科学系的StringFellow，地球科学系的Price和物理系的Hansen。\\n- 教员信息包括生物学系的Asam Javed和Jon Scales，数学系的Sarah Cobb和Kelley Cummings，化学系的Candice Fulton和Raelene Keesling，计算机科学系的Tina Johnson和Nelson Passos，工程系的Yu Guo和Zeki Ilhan，地球科学系的Anna Weiss和Peyton Lisenby，以及物理系的Jacqueline Dunn和Preet Sharman。\\n\\n根据以上信息，回答以下选择题：",\n        "question": "选择题 2：\\n生物学系是否也由Desai领导？",\n        "options": [\n            "(A) 是",\n            "(B) 否"\n        ]\n    },', 'selectedModels': [{'provider': 'OpenAI', 'model': 'gpt-3.5-turbo'}, {'provider': 'Tongyi', 'model': 'Qwen-1_8B-Chat'}], 'aggregatorConfig': {'provider': 'OpenAI', 'model': 'gpt-3.5-turbo'}, 'customPrompt': '', 'rounds': 1, 'temperature': 0.7, 'maxTokens': 2048} [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:233]
+2024-08-02 14:03:29,762 INFO: Starting MoA process with prompt:     {
+        "id": "round1_test_data_055",
+        "context": "在MSU大学里，有多个学院和系，其中每个系归属于一个特定的学院，每个学院归属于大学。以下是一些与MSU大学相关的人员及其职务信息：\n\n- 不同系的主席包括生物学系的Cook，数学系的Farris，化学系的Hansen，工程系的Desai，计算机科学系的StringFellow，地球科学系的Price和物理系的Hansen。\n- 教员信息包括生物学系的Asam Javed和Jon Scales，数学系的Sarah Cobb和Kelley Cummings，化学系的Candice Fulton和Raelene Keesling，计算机科学系的Tina Johnson和Nelson Passos，工程系的Yu Guo和Zeki Ilhan，地球科学系的Anna Weiss和Peyton Lisenby，以及物理系的Jacqueline Dunn和Preet Sharman。\n\n根据以上信息，回答以下选择题：",
+        "question": "选择题 2：\n生物学系是否也由Desai领导？",
+        "options": [
+            "(A) 是",
+            "(B) 否"
+        ]
+    }, [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:164]
+2024-08-02 14:03:29,763 INFO: Selected models: [{'provider': 'OpenAI', 'model': 'gpt-3.5-turbo'}, {'provider': 'Tongyi', 'model': 'Qwen-1_8B-Chat'}] [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:165]
+2024-08-02 14:03:29,763 INFO: Aggregator config: {'provider': 'OpenAI', 'model': 'gpt-3.5-turbo'} [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:166]
+2024-08-02 14:03:29,763 INFO: Round 1/1 collecting reference responses. [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:172]
+2024-08-02 14:03:29,763 INFO: Querying OpenAI:gpt-3.5-turbo [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:180]
+2024-08-02 14:03:32,019 INFO: Proposal from OpenAI:gpt-3.5-turbo (Round 1): (B) 否
+
+根据提供的信息，生物学系的主席是Cook，而不是Desai。 Desai领导的是工程系。... [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:188]
+2024-08-02 14:03:32,019 INFO: Querying Tongyi:Qwen-1_8B-Chat [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:180]
+2024-08-02 14:03:34,933 INFO: Proposal from Tongyi:Qwen-1_8B-Chat (Round 1): 根据提供的信息，生物学系的主席是 Cook，并不是 Desai。Desai 是工程系的主席。因此，答案是：
+
+**(B) 否**... [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:188]
+2024-08-02 14:03:34,934 INFO: Aggregating with OpenAI:gpt-3.5-turbo [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:202]
+2024-08-02 14:03:34,964 INFO: Aggregating with OpenAI. Context: query:
+    {
+        "id": "round1_test_data_055",
+        "context": "在MSU大学里，有多个学院和系，其中每个系归属于一个特定的... [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:114]
+2024-08-02 14:03:37,317 INFO: Aggregation result: Based on the information provided, the correct answer to the question "生物学系是否也由Desai领导？" (Is the Bio... [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:123]
+2024-08-02 14:03:37,318 INFO: Aggregation result: Based on the information provided, the correct answer to the question "生物学系是否也由Desai领导？" (Is the Bio... [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:208]
+2024-08-02 14:03:37,318 INFO: MoA process completed [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:222]
+2024-08-02 14:03:37,319 INFO: Conversation saved: 2024-08-02T14:03:37.318632 [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:153]
+2024-08-02 14:03:37,319 INFO: Sending MoA response: {'proposals': {'OpenAI:gpt-3.5-turbo': '(B) 否\n\n根据提供的信息，生物学系的主席是Cook，而不是Desai。 Desai领导的是工程系。', 'Tongyi:Qwen-1_8B-Chat': '根据提供的信息，生物学系的主席是 Cook，并不是 Desai。Desai 是工程系的主席。因此，答案是：\n\n**(B) 否**'}, 'aggregatedResponse': 'Based on the information provided, the correct answer to the question "生物学系是否也由Desai领导？" (Is the Biology Department also led by Desai?) is:\n\n**(B) 否**\n\nThis is because, according to the data presented, Cook leads the Biology Department, not Desai. Desai is the head of the Engineering Department. Therefore, Desai does not lead the Biology Department.'} [in /Users/azure/Desktop/ZJ/MoA/back-end/app.py:256]
