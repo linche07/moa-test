@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luna's Salon: The Convergence of Artificial Intelligence</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: true
+          },
+          options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>              
 </head>
 <body>
     <h1>Luna's Salon: The Convergence of Artificial Intelligence</h1>
@@ -16,9 +33,7 @@
 
     <div class="card">
         <h2>Select Models</h2>
-        <div class="checkbox-group" id="modelCheckboxes">
-            <!-- "All" option will be dynamically inserted here -->
-        </div>
+        <div class="checkbox-group" id="modelCheckboxes"></div>
     </div>
     
     <button id="generateBtn">Generate Response</button>
@@ -33,13 +48,10 @@
         <div id="modelResponses"></div>
     </div>
 
-    <!-- Card container for displaying the synthesized output -->
     <div class="card">
         <h2>Synthesized Output</h2>
-        <!-- Loading spinner -->
         <div id="loadingSpinner" class="spinner" style="display: none;"></div>
-        <!-- Paragraph element to show the synthesized output -->
-        <p id="synthesizedOutput">The synthesized output will appear here.</p>
+        <div id="synthesizedOutput">The synthesized output will appear here.</div>
     </div>
 
     <script src="script.js"></script>
